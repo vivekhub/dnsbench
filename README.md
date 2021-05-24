@@ -12,10 +12,10 @@ This is a simple python script that uses the python-dns module.  I use
 the TOML and the lock files along with the code.   
 
 if you are familar with poetry, you can get it going with 
-    poetry install
+    `poetry install`
 
 followed by 
-    poetry run python ./bench.py
+    `poetry run python ./bench.py`
 
 The program's output is self explanatory.
 
