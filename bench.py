@@ -10,13 +10,14 @@ DNS_SERVERS = {
     "Quad9-1": "9.9.9.9",
     "Quad9-2": "149.112.112.112",
     "Softlayer": "169.38.73.5",
-    "Reliance-India-1": "202.138.120.86",
-    "Reliance-India-2": "202.138.120.4",
-    "Reliance-India-3": "202.138.120.6",
-    "artech": "202.86.251.201",
+    # "Reliance-India-1": "202.138.120.86",
+    # "Reliance-India-2": "202.138.120.4",
+    # "Reliance-India-3": "202.138.120.6",
+    # "artech": "202.86.251.201",
     "SignNet": "115.42.228.246",
     "Mobile1-Singapore-1": "118.189.211.221",
     "Default Server": None,
+    "My Server": "192.168.2.25",
 }
 
 
@@ -31,7 +32,7 @@ def query_dns(domain):
         try:
             resp = my_resolver.resolve(domain, "A")
             timing = resp.response.time * 1000
-            print(f"Processed : {name}")
+            print(f"Processed : {name} \t with time: {timing:.1f} msecs")
             responses.append(
                 (
                     name,
